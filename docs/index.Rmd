@@ -5,34 +5,35 @@ date: "3/1/2022"
 output: html_document
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(ggplot2)
+library(dplyr)
+source("../source/analysis.R")
+```
+
 ### Introduction
-# An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+
 I'm curious to see, compare, and analyze the Asian american pacific islander population in jail with the White population in jail.
 
 ### Summary
-# A paragraph of summary information, citing at least 5 values calculated from the data
-
-After going through the data, it seems like compared to the average amount of Asian american pacific islander population across all county jails, which is `r current_avg_aapi_pop`, it doesn't even come close to the white population across all county jails, which is `r current_avg_white_pop`. Also to keep note, the county jail with the highest White and Asian population respectively are `r highest_white_pop_county` and `r highest_aapi_pop_county` While the county jail(s) with the lowest white and Asian population respectively are `r lowest_white_pop_county` and `r lowest_aapi_pop_county`.
+After going through the data, it seems like compared to the average amount of Asian american pacific islander population across all county jails, which is `r current_avg_aapi_pop`, it doesn't even come close to the White population across all county jails, which is `r current_avg_white_pop`. Also to keep note, the county jail with the highest White and Asian population respectively are `r highest_white_pop_county`, and `r highest_aapi_pop_county` While the county jail(s) with the lowest white and Asian population respectively are `r lowest_white_pop_county` and `r lowest_aapi_pop_county`.
 
 ### Trends over Time
-# A chart that shows trends over time for a variable of your choice
-
-```{r wht_aasi_ToT, echo=FALSE}
-plot(wht_aasi_ToT)
+```{r echo=FALSE}
+wht_aasi_ToT
 ```
 This trend shows the overall White and AAPI population across all county jails from the year 1998 to 2018, as noted that the White population vastly outnumbers the AAPI across the board, though the white population in recent trend is going down while AAPI is only progressively going up albeit slightly.
 
 ### Variable Comparison
-# A chart that compares two variables to one another
-
-```{r wht_aasi_top3_comparison, echo=FALSE}
-plot(wht_aasi_top3_comparison)
+```{r echo=FALSE}
+wht_aasi_top3_comparison
 ```
 This chart shows the top three counties with the most amounts of occupants showing how much Asian and White Jailants are in each one in comparison to each other. In all cases the White population exceeds the Asian population.
 
 ### Map
-# A map that shows how your measure of interest varies geographically
-```{r aapi_mapped, echo=FALSE}
-plot(aapi_mapped)
+```{r echo=FALSE}
+aapi_mapped
 ```
 This map shows a each of the states color coordinated to show a gradient change from purple to yellow of AAPI Jail population, interestingly compared to all other states California vastly outnumbers every other state. 

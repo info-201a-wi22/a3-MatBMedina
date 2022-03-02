@@ -6,7 +6,7 @@ library("maps")
 library("mapproj")
 
 # csv file
-incarceration_data <- read.csv(file = 'source/incarceration_trends.csv')
+incarceration_data <- read.csv(file = '/source/incarceration_trends.csv')
 
 # Introduction + Summary Analysis Code
 pop_current_year <- incarceration_data %>% filter(year == max(year))
